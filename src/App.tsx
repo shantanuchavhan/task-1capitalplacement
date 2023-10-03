@@ -1,16 +1,26 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import './App.css';
+import Header from './components/Header';
+import MainBody from './components/MainBody';
+import Sidebar from './components/Sidebar';
 
-function App() {
-  fetch("https://stoplight.io/mocks/freshertalent/task1capitalplacement/247155419/api/1/programs/%22y9lu1wqa4bc0w%22/application-form")
-  .then((response)=>response.json())
-  .then((data)=>console.log(data.data.attributes))
+
+
+
+const App: React.FC = () => {
+  
+
   return (
-    <div className="App">
-      <h1>hii</h1>
+    <div className='App'>
+      <Sidebar />
+      <Header />
+      <MainBody />
     </div>
   );
-}
+};
+
+
+
+
 
 export default App;

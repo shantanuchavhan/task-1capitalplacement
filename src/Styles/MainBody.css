@@ -1,0 +1,96 @@
+.SectionContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 200px;
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: -1px 4px 8px rgb(214, 212, 212);
+    
+  }
+  
+  .SectionContainerHeader{
+    background-color: #D0F7FA;
+    padding: 16px 32px;
+  }
+
+  .SectionContainerBottom{
+    padding:16px 24px ;
+  }
+
+.PersonalInfo, .Profile{
+    padding-bottom:40px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.attributes{
+    border-bottom: 1px solid rgb(212, 210, 210);
+    min-height: 48px;
+    color: black;
+ 
+    
+}
+
+.attribute-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AddedQuetion{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-input{
+    border: none !important;
+    height: 26px !important;
+  }
+
+.QuetionComponent{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
+.QuetionComponent-Action{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.delete{
+  color: red;
+  cursor: pointer;
+}
+
+.dropdown{
+  display: flex;
+  align-items: center;
+  height: 48px;
+  justify-content: space-between;
+  padding:0 8px;
+  border:1px solid black;
+  border-radius:8px
+}
+
+.ParaGraph, .MultipleChoice{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.AddedQuetion-Container{
+  display: flex;
+  flex-direction: column;
+  gap:16px ;
+}
