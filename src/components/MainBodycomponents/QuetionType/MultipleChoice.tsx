@@ -37,7 +37,7 @@ const MultipleChoice: React.FC<MultipleChoiceProps> = ({ getQuetionData, quetion
       other: false,
     };
     getQuetionData(data);
-  }, [inputValueQution, options, maxChoices]);
+  }, [inputValueQution, options, maxChoices,getQuetionData,questionId]);
 
   const handleOptionChange = (index: number, value: string) => {
     const updatedOptions = [...options];

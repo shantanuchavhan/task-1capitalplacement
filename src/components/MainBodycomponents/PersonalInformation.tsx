@@ -17,10 +17,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({ ApplicationDa
   const [updateQuetionName, setUpdatequetionName] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log(ApplicationData,"ApplicationData")
     setAllQuetions(ApplicationData?.data?.attributes?.personalInformation?.personalQuestions || []);
-    
-
   }, [ApplicationData?.data?.attributes?.personalInformation?.personalQuestions]);
 
   const UpdateQuetion = (question: any) => {

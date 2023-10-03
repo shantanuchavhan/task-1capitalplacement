@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AttributeComponent from './attributecomponent';
-import { connect } from 'react-redux';
+
 import { Input } from 'antd';
 import AddQuetion from './AddQuetion';
 
@@ -15,11 +15,11 @@ const ProfileComponent: React.FC<ProfileComponentProps> = ({ ApplicationData,set
   const [allQuetions, setAllQuetions] = useState<any[]>([]);
   const [updateQuetionName, setUpdatequetionName] = useState<string | null>(null);
   useEffect(() => {
-    console.log(ApplicationData,"ApplicationData")
+  
     setAllQuetions(ApplicationData?.data?.attributes?.profile.profileQuestions || []);
     
 
-  }, [ApplicationData?.data?.attributes?.profile.profileQuestions]);
+  }, [ApplicationData]);
 
   const UpdateQuetion = (question: any) => {
     setUpdatequetionName(question.question);

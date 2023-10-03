@@ -24,9 +24,9 @@ const DropDown: React.FC<DropDownProps> = ({ getQuetionData, quetion }) => {
     if (quetion !== "") {
       setInputValueQution(quetion.question);
       setOptions(quetion.choices);
-      setQuestionId(quetion.id || generateQuestionId());
+      setQuestionId(quetion.id );
     }
-  }, [quetion]);
+  }, [ quetion]);
 
   useEffect(() => {
     const data = {
@@ -39,7 +39,7 @@ const DropDown: React.FC<DropDownProps> = ({ getQuetionData, quetion }) => {
       other: false,
     };
     getQuetionData(data);
-  }, [inputValueQution, options]);
+  }, [inputValueQution, options,getQuetionData,questionId]);
 
   const handleOptionChange = (index: number, value: string) => {
     const updatedOptions = [...options];
