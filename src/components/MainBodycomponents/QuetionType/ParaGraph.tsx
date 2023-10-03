@@ -11,7 +11,7 @@ const ParaGraph: React.FC<ParaGraphProps> = ({ getQuetionData, quetion }) => {
     return '_' + Math.random().toString(36).substr(2, 9);
   };
   const [inputValueQution,setInputValueQution]=useState<string>('');
-  
+  const quetionId=generateQuestionId()
   useEffect(()=>{
     if(quetion!==""){
       setInputValueQution(quetion.question)
@@ -19,7 +19,7 @@ const ParaGraph: React.FC<ParaGraphProps> = ({ getQuetionData, quetion }) => {
   },[quetion])
    useEffect(()=>{
     const data = {
-      id: generateQuestionId(),
+      id:quetionId ,
       type: 'Paragraph',
       question: `${inputValueQution}`,
       choices: [],
@@ -29,7 +29,7 @@ const ParaGraph: React.FC<ParaGraphProps> = ({ getQuetionData, quetion }) => {
     };
 
     getQuetionData(data);
-   },[inputValueQution,generateQuestionId,getQuetionData])
+   },[inputValueQution,getQuetionData,quetionId])
   return (
     <div className='ParaGraph'>
         <QuetionInput inputValueQution={inputValueQution} setInputValueQution={setInputValueQution}/>
